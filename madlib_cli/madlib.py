@@ -26,7 +26,7 @@ def read_template(file_path):
         :param file_path: A string
         :return: string
     """
-    with open(file_path.replace("/", "\\"), "r") as text_file:
+    with open(file_path, "r") as text_file:
         return text_file.read()
 
 
@@ -74,14 +74,14 @@ def program_manager():
     This function is the manager for the program, printing the final result.
     """
     print(print_message())
-    print(merge(parse_template(read_template("assets\\madlib_cli.txt"))[0],
-                input_receiver(parse_template(read_template("assets\\madlib_cli.txt"))[1])))
+    print(merge(parse_template(read_template("assets/madlib_cli.txt"))[0],
+                input_receiver(parse_template(read_template("assets/madlib_cli.txt"))[1])))
 
 
 if __name__ == "__main__":
     program_manager()
-    # print(read_template('assets\\dark_and_stormy_night_template.txt'))
+    # print(read_template('assets/dark_and_stormy_night_template.txt'))
     # print(text_file_path)
-    # print(parse_template(read_template("assets\\madlib_cli.txt"))[1])
-    # print(merge(parse_template(read_template("assets\\madlib_cli.txt"))[0],
-    #             parse_template(read_template("assets\\madlib_cli.txt"))[1]))
+    # print(parse_template(read_template("assets/madlib_cli.txt"))[1])
+    # print(merge(parse_template(read_template("assets/madlib_cli.txt"))[0],
+    #             parse_template(read_template("assets/madlib_cli.txt"))[1]))
